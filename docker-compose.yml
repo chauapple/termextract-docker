@@ -1,0 +1,10 @@
+version: '2'
+services:
+  termextract:
+    container_name: faber_termextract
+    build: .
+    image: termextract:v1.0
+    volumes:
+      - ./data:/var/lib/termextract
+    stdin_open: true
+    tty: true
