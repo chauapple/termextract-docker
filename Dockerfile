@@ -56,6 +56,30 @@ RUN wget http://gensen.dl.itc.u-tokyo.ac.jp/soft/TermExtract-4_10.tar.gz && \
 ADD termextract_mecab.pl /usr/local/bin/termextract_mecab.pl
 RUN chmod 755 /usr/local/bin/termextract_mecab.pl
 
+ADD termextract_mecab.pl /usr/local/bin/termextract_english_text_frequency.pl
+RUN chmod 755 /usr/local/bin/termextract_english_text_frequency.pl
+
+ADD termextract_mecab.pl /usr/local/bin/termextract_english_text_score.pl
+RUN chmod 755 /usr/local/bin/termextract_english_text_score.pl
+
+ADD termextract_mecab.pl /usr/local/bin/termextract_mecab_frequency.pl
+RUN chmod 755 /usr/local/bin/termextract_mecab_frequency.pl
+
+ADD termextract_mecab.pl /usr/local/bin/termextract_mecab_score.pl
+RUN chmod 755 /usr/local/bin/termextract_mecab_score.pl
+
+ADD termextract_mecab.pl /usr/local/bin/termextract_mecab_verball_frequency.pl
+RUN chmod 755 /usr/local/bin/termextract_mecab_verball_frequency.pl
+
+ADD termextract_mecab.pl /usr/local/bin/termextract_mecab_verball_score.pl
+RUN chmod 755 /usr/local/bin/termextract_mecab_verball_score.pl
+
+ADD termextract_mecab.pl /usr/local/bin/termextract_mecab_verb_frequency.pl
+RUN chmod 755 /usr/local/bin/termextract_mecab_verb_frequency.pl
+
+ADD termextract_mecab.pl /usr/local/bin/termextract_mecab_verb_score.pl
+RUN chmod 755 /usr/local/bin/termextract_mecab_verb_score.pl
+
 ADD data/pre_filter.txt /var/lib/termextract/pre_filter.txt
 ADD data/post_filter.txt /var/lib/termextract/post_filter.txt
 
