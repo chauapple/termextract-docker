@@ -46,11 +46,11 @@ RUN wget -O mecab-perl-0.996.tar.gz "https://raw.githubusercontent.com/chauapple
     ldconfig && rm -rf mecab-perl-0.996.tar.gz* 
 
 # TermExtract
-RUN wget http://gensen.dl.itc.u-tokyo.ac.jp/soft/TermExtract-4_10.tar.gz && \
-    tar -xzf TermExtract-4_10.tar.gz && \
-    nkf --overwrite -Ew /TermExtract-4_10/TermExtract/MeCab.pm && \
-    cd TermExtract-4_10 && perl Makefile.PL && make && make install && \
-    rm -rf TermExtract-4_10.tar.gz*
+RUN wget http://gensen.dl.itc.u-tokyo.ac.jp/soft/TermExtract-4_11.tar.gz && \
+    tar -xzf TermExtract-4_11.tar.gz && \
+    nkf --overwrite -Ew /TermExtract-4_11/TermExtract/MeCab.pm && \
+    cd TermExtract-4_11 && perl Makefile.PL && make && make install && \
+    rm -rf TermExtract-4_11.tar.gz*
 
 # Add perl script
 ADD termextract_mecab.pl /usr/local/bin/termextract_mecab.pl
