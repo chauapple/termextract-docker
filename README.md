@@ -15,7 +15,7 @@ This Dockerfile builds containers for the following environment.
 | MeCab IPAdic | 2.7.0-20070801 |--with-charset=utf8|
 | MeCab IPAdic model | 2.7.0-20070801 ||
 | MeCab perl | 0.996 ||
-| TermExtract | 4_10 ||
+| TermExtract | 4_11 ||
 
 ## Construction
 
@@ -45,7 +45,7 @@ Enter EOS to end the input.
 $docker-compose exec termextract termextract_mecab.pl --input file/test.txt
 ```
 
-* Input format  
+* Input format
 Only text with UTF8 character code is supported.
 
 | Argument        | Explanation       |Default   |
@@ -74,7 +74,7 @@ Only text with UTF8 character code is supported.
 | --use_SDBM |Specify DBM used for learning function DB in SDBM_File||
 | --lock_dir |Specify temporary directory for exclusive lock of database|Do not lock|
 
-* Output result  
+* Output result  (only use for termextract_mecab.pl)
 <code>--output</code>The text of the analysis result according to the mode specified in is output to the standard output in UTF8 character code.
 
 
