@@ -53,6 +53,9 @@ RUN wget http://gensen.dl.itc.u-tokyo.ac.jp/soft/TermExtract-4_11.tar.gz && \
     rm -rf TermExtract-4_11.tar.gz*
 
 # Add perl script
+ADD MeCabVerb.pm /usr/local/share/perl5/TermExtract/
+ADD MeCabVerbAll.pm /usr/local/share/perl5/TermExtract/
+
 ADD termextract_mecab.pl /usr/local/bin/termextract_mecab.pl
 RUN chmod 755 /usr/local/bin/termextract_mecab.pl
 
