@@ -6,13 +6,21 @@
 use TermExtract::MeCab;
 my $data = new TermExtract::MeCab;
 
-my $InputFile = $ARGV[0];
 $SIG{INT} = $SIG{QUIT} = $SIG{TERM} = 'sigexit';
 
 my $output_mode = 1;
 $data->no_LR;
 
-my $command_mecab = 'cat ' . $InputFile . ' | mecab';
+# -i : Input File
+# -t : Text
+my $opt = $ARGV[0];
+my $command_mecab = '';
+if ($opt eq '-i') {
+	$command_mecab = 'cat ' . $ARGV[1] . ' | mecab';
+} else {
+  $command_mecab = "echo \"" . $ARGV[1] . "\" | mecab";
+}
+
 my $mecab_output = `$command_mecab`;
 
 my @noun_list = $data->get_imp_word($mecab_output, 'var');
