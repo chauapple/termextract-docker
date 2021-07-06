@@ -9,7 +9,7 @@ ENV LC_ALL ja_JP.UTF-8
 RUN yum install -y wget tar vi bzip2
 RUN yum install -y gcc make gcc-c++
 RUN yum install -y perl perl-devel
-RUN yum localinstall -y http://mirror.centos.org/centos/6/os/x86_64/Packages/nkf-2.0.8b-6.2.el6.x86_64.rpm
+RUN yum localinstall -y http://ftp.iij.ad.jp/pub/linux/centos-vault/6.7/os/x86_64/Packages/nkf-2.0.8b-6.2.el6.x86_64.rpm
 
 # for debian
 #RUN apt-get update
